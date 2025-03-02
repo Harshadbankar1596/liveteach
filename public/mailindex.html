@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="goldenrod" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="darkgoldenrod" media="(prefers-color-scheme: dark)">
+    <meta name="description" content="What services does offer? specializes in business application development, including custom software solutions, business suits, and&nbsp">
+    <meta property="og:image" content="https://www.mhtechin.com/wp-content/uploads/2024/08/favicon-150x150.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="author" content="Harshad Bankar">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="HTML, CSS, JavaScript, web development">
+    <title>mail.mhteachin</title>
+    <link rel="shortcut icon" href="https://www.mhtechin.com/wp-content/uploads/2024/08/favicon-150x150.png"
+        type="image/x-icon">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Baloo+Bhai+2:wght@400..800&display=swap');
+
+:root {
+    --color1: black;
+    --color2: goldenrod;
+    --color6: white;
+}
+::-webkit-scrollbar {
+    width: 1px;
+  }
+
+
+* {
+    font-family: "Baloo Bhai 2", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: black;
+}
+
+/* Navbar Styles */
+header{
+    top: 0px;
+    position: sticky;
+    z-index: 100;
+}
+nav {
+    top: 0px;
+    position: sticky;
+    width: 100%;
+    background: transparent;
+    padding: 1rem 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color2);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Close Button */
+.close-nav {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.nav-links li {
+    transition: 0.3s;
+
+}
+
+.nav-links li:hover {
+    transform: scale(1.2);
+    font-weight: bolder;
+}
+
+/* Main Navigation */
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--color6);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+    position: relative;
+}
+
+/* Neon Underline Effect */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: var(--color2);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: var(--color2);
+    transform: scale(1.1);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+@media (max-width: 1024px) {
+
+    hr {
+        display: flex;
+        border: 1px solid var(--color2);
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 1100;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        height: 100vh;
+        background: var(--color1);
+        flex-direction: column;
+        text-align: center;
+        padding: 4rem 2rem;
+        gap: 1rem;
+        border-right: 5px solid var(--color5);
+        box-shadow: 5px 0px 20px var(--color2);
+        backdrop-filter: blur(100px);
+        transition: all 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .close-nav {
+        display: block;
+        z-index: 1100;
+    }
+}
+
+/* nav bar style end */
+
+/* footer style */
+
+footer{
+    /* border: 2px solid red; */
+    height: auto;
+}
+.joinbox{
+    width: 100%;
+    /* border: 2px solid white; */
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    line-height: 3;
+}
+.joinbox h1{
+    color: white;
+    font-size: 3em;
+    font-weight:1;
+    margin-top: 50px;
+}
+.joinbox p{
+    color: white;
+    font-size: 20px;
+    /* margin: 20px; */
+
+}
+.joinbox button {
+    width: 250px;
+    height: auto;
+    border-radius: 90px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid wheat;
+    font-size: 30px;
+    font-weight: 200;
+    transition: 1s;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    /* padding: 10px; */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.joinbox button a {
+    color: white;
+    /* border: 2px solid; */
+    border-radius: 90px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    transition: 1s;
+}
+
+.joinbox button:hover,
+.joinbox button a:hover {
+    /* transform: scale(1.2); */
+    background-color: white;
+    border: none;
+    /* box-shadow: 10px 10px 20px rgba(245, 222, 179, 0.356); */
+    color: black;
+}
+.socialmedia{
+    /* border: 2px solid rgb(224, 7, 7); */
+    width: auto;
+    height: auto;
+    color: white;
+    /* margin: 20px;     */
+}
+.socialmedia #socialpara{
+    /* border: 2px solid; */
+    font-size: 20px;
+    line-height: 1;
+    margin: 20px;
+    /* padding: 10px; */
+}
+.socialmedia #followuspara{
+    /* border: 2px solid; */
+    margin: 20px;
+    font-size:40px;
+    line-height: 1;
+}
+
+.sociallogos{
+    /* border: 2px solid rgb(35, 245, 7); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sociallogos .socialimg{
+    height:auto;
+    width: auto;
+    padding: 10px;
+    /* border: 2px solid yellow; */
+    margin:10px;
+   
+    /* aspect-ratio: 3/1; */
+}
+.sociallogos .socialimg img{
+    transition: 0.3s;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    background: #000000;
+    mix-blend-mode: black;
+    /* border: 2px solid; */
+}
+.sociallogos .socialimg img:hover{
+    transform: scale(1.2);
+}
+
+.copyright{
+    /* border: 2px solid black; */
+    margin: 0;
+    height: auto;
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    /* display: flex; */
+    justify-content: space-between;
+}
+.copyclass{
+    font-size:20px;
+    line-height: 1;
+    font-weight: bolder;
+}
+
+@media (max-width: 1024px) {
+    .facsdetails{
+        display: block;
+    }
+
+    .facsdetails .detailstag{
+        width: 95%;
+        margin: 10px;
+    }
+    .sociallogos .socialimg img{
+        height: 25px;
+        width: 25px;
+    }
+}
+
+/* footer style end */
+
+main{
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+
+/* From Uiverse.io by alexruix */ 
+.form-box {
+    max-width: 300px;
+    background: rgba(32, 31, 31, 0.486);
+    overflow: hidden;
+    border-radius: 16px;
+    color: var(--color2);
+    margin-top: 50px;
+  }
+  
+  .form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 24px 24px;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  /*Form text*/
+  .title {
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  
+  /*Inputs box*/
+  .form-container {
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 1rem 0 .5rem;
+    width: 100%;
+  }
+  
+  .input {
+    background: none;
+    border: 0;
+    outline: 0;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    font-size: .9rem;
+    padding: 8px 15px;
+  }
+  
+  .form-section {
+    padding: 16px;
+    font-size: .85rem;
+    background-color: #e0ecfb;
+    box-shadow: rgb(0 0 0 / 8%) 0 -1px;
+  }
+  
+  .form-section a {
+    font-weight: bold;
+    color: var(--color2);
+    transition: color .3s ease;
+  }
+  
+  .form-section a:hover {
+    color: #005ce6;
+    text-decoration: underline;
+  }
+  
+  /*Button*/
+  .form button {
+    background-color: var(--color2);
+    color: #080000;
+    border: 0;
+    border-radius: 24px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .3s ease;
+  }
+  
+  .form button:hover {
+    background-color: #005ce6;
+  }
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MHTEACHIN</div>
+
+            <ul class="nav-links">
+                <button class="close-nav">✖</button>
+                <li><a href="/">home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/career">Career</a></li>
+                <li><a href="/mobile">Mobile</a></li>
+                <li><a href="/mail">Mail</a></li>
+                <li><a href="https://innovations.mhtechin.com/">Innovation</a></li>
+                <li><a href="/suite">Suite</a></li>
+                <li><a href="https://www.mhtechin.com/support/">Support</a></li>
+                <li><a href="/registermhform">Contact</a></li>
+            </ul>
+
+            <button class="menu-toggle">☰</button>
+
+        </nav>
+    </header>
+    <main>
+
+        <div class="form-box">
+            <form class="form" method="post" action="/mail"> 
+                <span class="title">Sign up</span>
+                <span class="subtitle">Create a free account with your email.</span>
+                <div class="form-container">
+                  <input type="text" class="input" placeholder="Full Name" name="fullname">
+                        <input type="email" class="input" placeholder="Email" name="mail" required>
+                        <input type="password" class="input" placeholder="Password" name="password" required>
+                </div>
+                <button>Sign up</button>
+            </form>
+            <div class="form-section">
+              <p>Have an account? <a href="">Log in</a> </p>
+            </div>
+            </div>
+
+    </main>
+    <footer>
+        <div class="joinbox">
+            <h1 id="jointeamheading">Join our team</h1>
+            <p id="joinpara">Realize your potential.</p>
+            <button id="joinbtn" ><a href="/registermhform" style="text-decoration: none;;">GET strated</a></button>        </div>
+
+        <div class="socialmedia">
+            <div class="socialparas">
+                <p id="socialpara">Social</p>
+                <p id="followuspara">Follow us for the latest updates</p>
+            </div>
+            <div class="sociallogos">
+
+                <a href="https://www.facebook.com/people/Mhtechin/61556177946992/" class="socialimg"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png"
+                        alt=""></a>
+                <a href="https://www.youtube.com/@mhtechintech" class="socialimg"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968852.png"
+                        alt=""></a>
+                <a href="https://www.instagram.com/mhtechin?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="socialimg"><img src="https://cdn-icons-png.flaticon.com/128/174/174855.png"
+                        alt=""></a>
+                <a href="https://www.linkedin.com/company/mhtechin-india/" class="socialimg"><img src="https://cdn-icons-png.flaticon.com/128/15455/15455800.png"
+                        alt=""></a>
+
+            </div>
+
+            <div class="copyright">
+                <div class="copyclass">
+                    <p id="companylogo">MHTEACHIN</p>
+                </div>
+                <div class="copyclass">
+                    <p id="copyrightpara">&copy copyright 2025 All rights reserved by MHTEACHIN</p>
+                </div>
+
+
+            </div>
+    </footer>
+    <script>
+        // nav script start
+        const menuToggle = document.querySelector('.menu-toggle');
+        const closeNav = document.querySelector('.close-nav');
+        const navLinks = document.querySelector('.nav-links');
+
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.add('active');
+        });
+
+        closeNav.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+        //nav script end
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="goldenrod" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="darkgoldenrod" media="(prefers-color-scheme: dark)">
+    <meta name="description" content="What services does offer? specializes in business application development, including custom software solutions, business suits, and&nbsp">
+    <meta property="og:image" content="https://www.mhtechin.com/wp-content/uploads/2024/08/favicon-150x150.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="author" content="Harshad Bankar">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="HTML, CSS, JavaScript, web development">
+
+    <title>mhteachin</title>
+
+    <link rel="stylesheet" href="mainstyle.css">
+    <link rel="shortcut icon" href="https://www.mhtechin.com/wp-content/uploads/2024/08/favicon-150x150.png"
+        type="image/x-icon">
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Baloo+Bhai+2:wght@400..800&display=swap');
+
+:root {
+    --color1: black;
+    --color2: goldenrod;
+    --color6: white;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+hr {
+    display: none;
+}
+
+* {
+    font-family: "Baloo Bhai 2", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: black;
+}
+
+/* Navbar Styles */
+header {
+    top: 0px;
+    position: sticky;
+    z-index: 100;
+}
+
+nav {
+    top: 0px;
+    position: sticky;
+    width: 100%;
+    background: transparent;
+    padding: 1rem 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    /* box-shadow: 0px 0px 300px var(--color2); */
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color2);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Close Button */
+.close-nav {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.nav-links li {
+    transition: 0.3s;
+
+}
+
+.nav-links li:hover {
+    transform: scale(1.2);
+    font-weight: bolder;
+}
+
+/* Main Navigation */
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--color6);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+    position: relative;
+}
+
+/* Neon Underline Effect */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: var(--color2);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: var(--color2);
+    transform: scale(1.1);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.genaicontainer {
+    /* border: 3px solid; */
+    position: relative;
+    width: 100%;
+    height: 36em;
+    color: white;
+    z-index: 1;
+    align-content: center;
+    text-align: center;
+    /* box-shadow: 0px 100px 1000px 10px black inset; */
+
+}
+
+.genaicontainer::before {
+    content: "";
+    background-attachment: fixed;
+    background-image: url("https://bootstrapmade.com/content/demo/Gp/assets/img/hero-bg.jpg");
+    background-size: cover;
+    background-position: right;
+    justify-content: center;
+    opacity: 0.4;
+    /* Adjust the opacity here */
+    position: absolute;
+    /* background-color: hsl(0, 100%, 50%); /* Instead of opacity */
+    /* background-blend-mode:multiply; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 120%;
+    height: 100%;
+    z-index: -1;
+
+    /* Ensure this is behind the text */
+
+
+}
+
+.genaicontainer p {
+    position: relative;
+    z-index: 10;
+    color: white;
+}
+
+.maingenaip {
+    font-size: 2em;
+    font-weight: bold;
+    font-stretch: 150%;
+}
+
+.mainpara {
+    margin-top: 70px;
+    /* border: 3px solid ; */
+}
+
+#genaipara {
+    font-size: 15px;
+    margin: 40px;
+}
+
+
+
+#getsratedbtn {
+    background-color: transparent;
+    border: 5px solid goldenrod;
+    color: white;
+    padding: 10px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+    text-decoration: none;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+#getsratedbtn:hover {
+    transform: scale(1.1);
+    background-color: goldenrod;
+    color: black;
+    box-shadow: 10px 10px 20px black;
+}
+
+#genaiuser {
+    /* padding: 10px; */
+    margin: 20px;
+}
+
+
+
+
+
+.tools {
+    height: auto;
+    /* border: 2px solid white; */
+    color: wheat;
+    /* box-shadow: 0px 0px 20px black; */
+    align-content: center;
+}
+
+.tools .toolspara {
+    /* border: 2px solid white; */
+    margin-top: 50px;
+    margin-bottom: 80px;
+    height: auto;
+    align-content: center;
+    text-align: center;
+}
+
+#toolspara1 {
+    color: var(--color2);
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#toolspara2 {
+    font-size: 40px;
+    line-height: 1;
+}
+
+#toolspara3 {
+    font-size: 5vw;
+    line-height: 1;
+
+}
+
+.crmbox {
+    /* border: 2px solid rgb(255, 0, 0); */
+    display: flex;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    /* overflow: hidden; */
+}
+
+.leftcrmbox {
+    /* border: 2px solid white; */
+    height: auto;
+    padding: 10px;
+    /* overflow: auto; */
+    width: 50vw;
+    align-content: center;
+    text-align: center;
+}
+
+.leftcrmbox #crm {
+    font-weight: bolder;
+    font-size: 5em;
+    color: var(--color2);
+}
+
+.leftcrmbox #crminfo {
+    font-size: 2em;
+    font-weight: 100;
+    line-height: 1;
+}
+
+.rightcrmbox {
+    /* border: 2px solid rgb(18, 22, 212); */
+    width: 50vw;
+    align-content: center;
+    text-align: center;
+}
+
+#crmlogo {
+    color: antiquewhite;
+    filter: (100%);
+    height: 10em;
+}
+
+.crmlogo {
+    display: inline-block;
+    /* border: 2px solid; */
+    animation: appear1 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.erpbox {
+    width: 100%;
+    height: 20em;
+    /* border: 2px solid white; */
+    display: flex;
+    height: auto;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.erpbox .lefterpbox {
+    /* border: 2px solid; */
+
+    width: 50%;
+    height: auto;
+    align-content: center;
+    text-align: center;
+}
+
+.lefterpbox #erplogo {
+    color: antiquewhite;
+    filter: (100%);
+    height: 10em;
+}
+
+.lefterpbox .erplogo {
+    display: inline-block;
+    /* border: 2px solid; */
+    animation: appear2 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.erpbox .righterpbox {
+    width: 50%;
+    /* height: auto; */
+    /* border: 2px solid red; */
+    align-content: center;
+    text-align: center;
+}
+
+
+
+.righterpbox #erp {
+    font-weight: bolder;
+    font-size: 5em;
+    color: var(--color2);
+}
+
+.righterpbox #erpinfo {
+    font-size: 2em;
+    font-weight: 100;
+    line-height: 1;
+}
+
+.workspacebox {
+    width: 100%;
+    height: 20em;
+    /* border: 2px solid white; */
+    display: flex;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.workspacebox .worksoaceleftbox {
+    /* border: 2px solid; */
+    width: 50%;
+    padding: 10px;
+    height: auto;
+    align-content: center;
+    text-align: center;
+}
+
+.worksoaceleftbox #workspace {
+    color: var(--color2);
+    font-weight: bolder;
+    font-size: 250%;
+    /* font-size:5em; */
+}
+
+.worksoaceleftbox #workspaceinfo {
+    font-size: 2em;
+    font-weight: 100;
+    line-height: 1;
+}
+
+.workspacebox .workspacerightbox {
+    /* border: 2px solid; */
+    width: 50%;
+    text-align: center;
+    align-content: center;
+}
+
+.workspacerightbox .workspacelogo {
+    display: inline-block;
+    /* border: 2px solid; */
+    animation: appear1 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.workspacerightbox #workspacelogo {
+    color: antiquewhite;
+    filter: (100%);
+    height: 10em;
+}
+
+
+
+.helpingcontainer {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    position: relative;
+    width: 100%;
+    height: auto;
+    color: white;
+    z-index: 1;
+    align-content: center;
+    text-align: center;
+    box-shadow: 0px 100px 1000px 10px black inset;
+}
+
+.helpingcontainer::before {
+    content: "";
+    background-attachment: fixed;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/fd/Problem_Solving_Illustration_%28Concept_Image%29.jpg");
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    opacity: 0.2;
+    /* Adjust the opacity here */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.helpingcontainer .helpinfo {
+    /* border: 2px solid; */
+    text-align: center;
+    width: 50%;
+}
+
+.helpinfo #mainhelpinfo {
+    font-weight: bolder;
+    font-size: 3em;
+    line-height: 1;
+    color: var(--color2);
+    text-shadow: 0px 0px 20px black;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.helpinfo #helpinfo {
+    text-shadow: 0px 0px 20px black;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.helpingcontainer .helpfeau {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* border: 2px solid; */
+    width: 50%;
+    text-align: center;
+    align-content: center;
+    text-align: center;
+    align-content: center;
+    /* padding: 50px; */
+}
+
+.helpfeau .Easytouse {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    /* border-radius: 20px; */
+    border-top-left-radius: 50px;
+    border-end-end-radius: 50px;
+    border-end-start-radius: 50px;
+    height: 13em;
+    width: 13em;
+
+    text-align: center;
+    align-content: center;
+    margin: 10px;
+    border: 5px solid;
+    padding: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--color2);
+    text-shadow: 10px 10px 20px black;
+    box-shadow: 10px 10px 20px black;
+}
+
+.helpfeau .Smartfeatures {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    /* border-radius: 20px; */
+    border-top-left-radius: 50px;
+    border-end-end-radius: 50px;
+    border-end-start-radius: 50px;
+    height: 13em;
+    width: 13em;
+
+    margin: 10px;
+    border: 5px solid;
+    padding: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--color2);
+    text-shadow: 10px 10px 20px black;
+    box-shadow: 10px 10px 20px black;
+
+}
+
+.helpfeau .Multipleusers {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    /* border-radius: 20px; */
+    border-top-left-radius: 50px;
+    border-end-end-radius: 50px;
+    border-end-start-radius: 50px;
+    height: 13em;
+    width: 13em;
+
+    margin: 10px;
+    border: 5px solid;
+    padding: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--color2);
+    text-shadow: 10px 10px 20px black;
+    box-shadow: 10px 10px 20px black;
+
+}
+
+.helpfeau .Secureplatform {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    height: 13em;
+    width: 13em;
+    /* border-radius: 20px; */
+    border-top-left-radius: 50px;
+    border-end-end-radius: 50px;
+    border-end-start-radius: 50px;
+    margin: 10px;
+    border: 5px solid;
+    padding: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--color2);
+    text-shadow: 10px 10px 20px rgb(0, 0, 0);
+    box-shadow: 10px 10px 20px black;
+
+}
+
+.helpfeau img {
+    height: 6em;
+}
+
+.featuresmain {
+    display: inline-block;
+    animation: appear3 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    transition: 0.3s;
+}
+
+.featuresmain:hover {
+    transform: scale(1.1);
+    border: none;
+    background-color: white;
+    color: black;
+}
+
+.groesinfo {
+    width: 100%;
+    height: auto;
+    /* border: 2px solid white;  */
+    color: white;
+}
+
+.groesinfo .maingroesinfo {
+    color: white;
+    font-weight: bolder;
+    font-size: 2em;
+    align-content: center;
+    text-align: center;
+    line-height: 1;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* border: 2px solid; */
+}
+
+.groesinfo .paragroesinfo {
+    font-size: 20px;
+    line-height: 1;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.groesinfo .groestype {
+    /* border: 2px solid; */
+    align-content: center;
+    justify-content: space-around;
+    text-align: center;
+    display: flex;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.groestype #groestype {
+    /* border: 2px solid; */
+    padding: 10px;
+    /* border-radius: 20px; */
+    color: var(--color2);
+    margin: 20px;
+    width: auto;
+    align-content: center;
+    height: auto;
+    transition: 0.3s;
+}
+
+#groestype:hover {
+    border: none;
+    /* background-color: var(--color2); */
+    color: white;
+    font-weight: bolder;
+    transform: scale(1.2);
+    /* box-shadow: 5px 5px 10px bisque; */
+}
+
+.counters {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    /* border: 5px solid; */
+    color: var(--color2);
+    z-index: 1;
+    /* overflow: auto; */
+
+}
+
+.counters::before {
+    content: "";
+    /* Required for ::before to work */
+
+    /* Background Image */
+    background-image: url("https://image.lexica.art/full_webp/33515dcc-e491-4f27-869b-85872dddbb39");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Works with some fixes */
+    /* Background Color with Opacity */
+    background-color: hsl(0, 0%, 100%);
+    /* Instead of opacity */
+    background-blend-mode: multiply;
+    /* Better effect */
+    /* Positioning */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Fixes the syntax error */
+    /* Size */
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Ensure it stays behind content */
+}
+
+.leftcont {
+    border: px solid;
+    border-radius: 20px;
+    height: 10em;
+    width: 20em;
+    color: black;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    box-shadow: 10px 10px 20px black;
+    animation: appear2 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    display: inline-block;
+    backdrop-filter: blur(10px);
+}
+
+.leftcont p {
+    font-size: 2em;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+.softwaretools {
+    /* border: 2px solid white; */
+    background-color: rgba(8, 8, 8, 0.5);
+    width: 100%;
+    height: auto;
+}
+
+.softwaretools .softwaretoolsmainpara {
+    /* border: 2px solid black; */
+    font-size: 2em;
+    line-height: 1;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    align-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.softwaretoolslist {
+    /* border: 2px solid; */
+    /* background-color: black; */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    overflow-x: auto;
+    /* Allows horizontal scrolling */
+    width: 100%;
+    gap: 20px;
+    /* Adds space between items */
+    padding: 10px;
+    scroll-padding: 20px;
+}
+
+.toolslist {
+    /* border: 2px solid white; */
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+    height: 20em;
+    display: flex;
+    /* Uncommented */
+    flex-direction: column;
+    /* Stack content vertically */
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    /* Ensures pseudo-element doesn't spill */
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.toolslist1::before {
+    content: "";
+    background-image: url("https://99designs-blog.imgix.net/blog/wp-content/uploads/2020/08/Best_ecommerce_platform_jpg_5Hd3CmTD.jpg?auto=format&q=60&w=1280&h=960&fit=crop&crop=faces");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Sends it behind the content */
+    transition: 1s;
+
+}
+
+.toolslist2::before {
+    content: "";
+    background-position: center;
+    background-image: url("https://media.istockphoto.com/id/815166664/photo/closeup-view-of-female-hands-touching-smartphone-white-blank-screen-horizontal-blurred.jpg?s=612x612&w=0&k=20&c=TOGuL3_GlxgWzi-EPP4Yvhmh5keFWcLZn0WvY0egV0M=");
+    background-size: cover;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Sends it behind the content */
+    transition: 1s;
+
+}
+
+.toolslist3::before {
+    content: "";
+    background-position: center;
+    background-image: url("https://www.netventure.in/wp-content/uploads/2022/08/increase-conversion-rate-2018.jpg");
+    background-size: cover;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Sends it behind the content */
+    transition: 1s;
+
+}
+
+.toolslist4::before {
+    content: "";
+    background-position: center;
+    background-image: url("https://vitaldesign.com/wp-content/uploads/2019/04/custom-website-integration-e1555961696118.jpg");
+    background-size: cover;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Sends it behind the content */
+    transition: 1s;
+
+}
+
+.toolslist:hover::before {
+    transform: scale(1.5);
+    box-shadow: inset 0px -200px 100px black;
+}
+
+
+.toolslist p {
+    /* position: absolute; */
+    /* bottom: 10px; */
+    color: aliceblue;
+    /* border: 2px solid; */
+    padding: 5px;
+    /* background:transparent;  */
+    width: 90%;
+    /* Ensures consistent width */
+    text-align: center;
+    height: auto;
+    margin: auto;
+}
+
+#toolslistpara {
+    font-size: 2em;
+    line-height: 1;
+    height: auto;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 10px 10px 20px black;
+}
+
+#toolslistparachild {
+    text-shadow: 5px 5px 10px black;
+    /* display: none; */
+}
+
+.faqs {
+    width: auto;
+    background: #080808;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faqsheading h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #bb9e9e;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.facsdetails details {
+    background: rgb(0, 0, 0);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.facsdetails details summary {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color2);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.facsdetails details[open] {
+    background: #000000;
+    border-left: 5px solid #feffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+}
+
+.detailspara {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+details summary::after {
+    content: "➕";
+    font-size: 18px;
+    color: #007bff;
+    transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+    content: "➖";
+}
+
+details:hover {
+    transform: scale(1.02);
+}
+
+footer {
+    /* border: 2px solid red; */
+    height: auto;
+}
+
+.joinbox {
+    width: 100%;
+    /* border: 2px solid white; */
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    line-height: 3;
+}
+
+.joinbox h1 {
+    color: white;
+    font-size: 3em;
+    font-weight: 1;
+    margin-top: 50px;
+}
+
+.joinbox p {
+    color: white;
+    font-size: 20px;
+    /* margin: 20px; */
+
+}
+
+.joinbox button {
+    width: 250px;
+    height: auto;
+    border-radius: 90px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid wheat;
+    font-size: 30px;
+    font-weight: 200;
+    transition: 1s;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    /* padding: 10px; */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.joinbox button a {
+    color: white;
+    /* border: 2px solid; */
+    border-radius: 90px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    transition: 1s;
+}
+
+.joinbox button:hover,
+.joinbox button a:hover {
+    /* transform: scale(1.2); */
+    background-color: white;
+    border: none;
+    /* box-shadow: 10px 10px 20px rgba(245, 222, 179, 0.356); */
+    color: black;
+}
+
+.socialmedia {
+    /* border: 2px solid rgb(224, 7, 7); */
+    width: auto;
+    height: auto;
+    color: white;
+    /* margin: 20px;     */
+}
+
+.socialmedia #socialpara {
+    /* border: 2px solid; */
+    font-size: 20px;
+    line-height: 1;
+    margin: 20px;
+    /* padding: 10px; */
+}
+
+.socialmedia #followuspara {
+    /* border: 2px solid; */
+    margin: 20px;
+    font-size: 40px;
+    line-height: 1;
+}
+
+li {
+    list-style: none;
+}
+
+.sociallogos {
+    /* border: 2px solid rgb(35, 245, 7); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sociallogos .socialimg {
+    height: auto;
+    width: auto;
+    padding: 10px;
+    /* border: 2px solid yellow; */
+    margin: 10px;
+
+    /* aspect-ratio: 3/1; */
+}
+
+.sociallogos .socialimg img {
+    transition: 0.3s;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    background: #000000;
+    mix-blend-mode: black;
+    /* border: 2px solid; */
+}
+
+.sociallogos .socialimg img:hover {
+    transform: scale(1.2);
+}
+
+.copyright {
+    /* border: 2px solid black; */
+    margin: 0;
+    height: auto;
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    /* display: flex; */
+    justify-content: space-between;
+}
+
+.copyclass {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: bolder;
+}
+
+/* Responsive Navigation */
+@media (max-width: 1024px) {
+
+    hr {
+        display: flex;
+        border: 1px solid var(--color2);
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 1100;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        height: 100vh;
+        background: var(--color1);
+        flex-direction: column;
+        text-align: center;
+        padding: 4rem 2rem;
+        gap: 1rem;
+        border-right: 5px solid var(--color5);
+        box-shadow: 5px 0px 20px var(--color2);
+        backdrop-filter: blur(100px);
+        transition: all 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .close-nav {
+        display: block;
+        z-index: 1100;
+    }
+
+    .crmbox {
+        display: block;
+
+    }
+
+    .crmbox .leftcrmbox {
+        width: 100%;
+    }
+
+    .crmbox .rightcrmbox {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .erpbox {
+        /* display:block; */
+        flex-direction: column-reverse;
+    }
+
+    .erpbox .righterpbox {
+        width: 100%;
+        /* margin-top: 50px; */
+    }
+
+    .erpbox .lefterpbox {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .workspacebox {
+        display: block;
+    }
+
+    .workspacebox .workspacerightbox {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .workspacebox .worksoaceleftbox {
+        width: 100%;
+        /* margin-top: 50px; */
+    }
+
+    .helpingcontainer {
+        display: block;
+    }
+
+    .helpingcontainer .helpinfo {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .helpingcontainer .helpfeau {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .facsdetails {
+        display: block;
+    }
+
+    .facsdetails .detailstag {
+        width: 95%;
+        margin: 10px;
+    }
+
+    .sociallogos .socialimg img {
+        height: 25px;
+        width: 25px;
+    }
+
+
+}
+
+
+@keyframes appear1 {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes appear2 {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes appear3 {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateZ(0px);
+    }
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MHTEACHIN</div>
+
+            <ul class="nav-links">
+                <button class="close-nav">✖</button>
+                <li><a href="/">home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/career">Career</a></li>
+                <li><a href="/mobile">Mobile</a></li>
+                <li><a href="/mail">Mail</a></li>
+                <li><a href="https://innovations.mhtechin.com/">Innovation</a></li>
+                <li><a href="/suite">Suite</a></li>
+                <li><a href="https://www.mhtechin.com/support/">Support</a></li>
+                <li><a href="/registermhform">Contact</a></li>
+            </ul>
+
+            <button class="menu-toggle">☰</button>
+
+        </nav>
+    </header>
+    <main>
+
+        <div class="genaicontainer">
+            <div class="mainpara">
+                <p class="genaip1 maingenaip">Transforming Businesses</p>
+                <p class="genaip2 maingenaip">Using Gen AI</p>
+            </div>
+            <p id="genaipara">MHTECHIN helps businesses focus on solving problems for their customers through innovative
+                software solutions </p>
+            <div class="btn">
+                <a id="getsratedbtn" href="/registermhform">GET strated</a>
+            </div>
+            <p id="genaiuser">10,000+ Users</p>
+        </div>
+
+        <div class="tools">
+            <div class="toolspara">
+                <p id="toolspara1">EVERYTHING YOU NEED </p>
+                <p id="toolspara2">The most powerful tools for your</p>
+                <p id="toolspara2">Business</p>
+            </div>
+
+            <div class="crmbox">
+                <div class="leftcrmbox">
+                    <p id="crm">CRM</p>
+                    <p id="crminfo">Simplify your work and gain customers into your business with our advanced CRM tools
+                    </p>
+                </div>
+                <div class="rightcrmbox">
+                    <div class="crmlogo">
+                        <img id="crmlogo" src="https://www.svgrepo.com/show/245819/crm-crm.svg" alt="crm">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="erpbox">
+                <div class="lefterpbox">
+                    <div class="erplogo">
+                        <img id="erplogo" src="https://cdn-icons-png.flaticon.com/128/10614/10614657.png" alt="erp">
+                    </div>
+                </div>
+                <div class="righterpbox">
+                    <p id="erp">ERP</p>
+                    <p id="erpinfo">Less planning needed to customize aspects of your resource. </p>
+                </div>
+            </div>
+            <hr>
+            <div class="workspacebox">
+                <div class="worksoaceleftbox">
+                    <p id="workspace">Workspace </p>
+                    <p id="workspaceinfo">Whether you're just starting out or looking to expand, our platform is
+                        designed to grow with you </p>
+                </div>
+                <div class="workspacerightbox">
+                    <div class="workspacelogo">
+                        <img id="workspacelogo" src="https://cdn-icons-png.flaticon.com/128/3535/3535598.png"
+                            alt="workspace">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="helpingcontainer">
+
+            <div class="helpinfo">
+                <p id="mainhelpinfo">Helping you focus on what really matters </p>
+                <p id="helpinfo">By hosting and managing all software and infrastructure on our platform, you can save
+                    time and resources that would otherwise be spent on maintenance and support. </p>
+            </div>
+
+            <div class="helpfeau">
+
+                <div class="Easytouse  featuresmain">
+                    <p id="Easytouseh">Easytouse</p>
+                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/computers-mobile-hardware/hover-click-icon.svg"
+                        alt="Easytouseh" id="Easytouseimg">
+                </div>
+                <div class="Smartfeatures featuresmain">
+                    <p id="Smartfeaturesh">Smartfeatures</p>
+                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/creative-idea-solution-icon.svg"
+                        alt="Smartfeatures" id="Smartfeaturesimg">
+                </div>
+                <div class="Multipleusers featuresmain">
+                    <p id="Multipleusersh">Multipleusers</p>
+                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/crowd-icon.svg"
+                        alt="Multipleusers" id="Multipleusersimg">
+                </div>
+                <div class="Secureplatform featuresmain">
+                    <p id="Secureplatformh">Secureplatform</p>
+                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/buildings-architecture-real-estate/real-estate-agent-realtor-icon.svg"
+                        alt="Secureplatformh" id="Secureplatformimg">
+                </div>
+            </div>
+        </div>
+        <div class="groesinfo">
+            <p class="maingroesinfo">
+                Designed to scale when your business grows
+            </p>
+            <p class="paragroesinfo">
+                MHTECHIN platform is designed to scale with your business, so you can easily accommodate more users and
+                customers as your Saas grows.
+            </p>
+            <div class="groestype">
+                <p id="groestype">Designed to scale</p>
+                <p id="groestype">No cost EMI</p>
+                <p id="groestype">Latest Framework supports</p>
+                <p id="groestype">100% Uptime</p>
+            </div>
+        </div>
+
+        <div class="counters">
+
+            <div class="cloudapicounter leftcont">
+                <p id="cloudapicounter">100+</p>
+                <p id="cloudapipara">Cloud API</p>
+            </div>
+            <div class="cloudbasecounter leftcont">
+                <p id="cloudbasecounter">100%</p>
+                <p id="cloudbasepara">Cloud Base</p>
+            </div>
+            <div class="userrevivewcounter leftcont">
+                <p id="userrevivewcounter">5 Star</p>
+                <p id="star">User Reviews</p>
+            </div>
+        </div>
+
+        <div class="softwaretools">
+
+            <div class="softwaretoolsmainpara">
+                <p id="softwaretoolsmainpara">Compatible with all your favorite software tools </p>
+            </div>
+
+            <div class="softwaretoolslist">
+                <div class="toolslist toolslist1">
+                    <p id="toolslistpara">eCommerce plugins</p>
+                    <p id="toolslistparachild">enhance online stores by adding features like payment gateways</p>
+                </div>
+                <div class="toolslist toolslist2">
+                    <p id="toolslistpara">Form plugins</p>
+                    <p id="toolslistparachild">enhance web forms by adding features like validation</p>
+                </div>
+                <div class="toolslist toolslist3">
+                    <p id="toolslistpara">Conversion Rate</p>
+                    <p id="toolslistparachild">conversion rate is the percentage of website visitors who complete a
+                        desired action</p>
+
+                </div>
+                <div class="toolslist toolslist4">
+                    <p id="toolslistpara">Costom Integrations</p>
+                    <p id="toolslistparachild">web development connects different systems, APIs, or third-party services
+                        to enhance functionality </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="faqs">
+            <div class="faqsheading">
+                <h1>Frequently asked questions </h1>
+            </div>
+
+            <div class="facsdetails">
+                <details class="detailstag">
+                    <summary class="detailsheading">What services does MHTECHIN offer? </summary>
+                    <p class="detailspara">MHTECHIN specializes in business application development, including custom
+                        software solutions, business suits, and integration services. We also offer email marketing
+                        solutions, business email setups, and related services to enhance your business operations and
+                        communication. </p>
+                </details>
+                <details class="detailstag">
+                    <summary class="detailsheading">What is a business suit, and how can it benefit my company?
+                    </summary>
+                    <p class="detailspara">A business suit typically refers to a comprehensive package of integrated
+                        software tools designed to streamline various business processes, such as customer relationship
+                        management (CRM), enterprise resource planning (ERP), and more. It helps improve efficiency,
+                        data management, and overall productivity by centralizing and automating key functions. </p>
+                </details>
+                <details class="detailstag">
+                    <summary class="detailsheading">How does your email marketing service work? </summary>
+                    <p class="detailspara">Our email marketing service involves creating and managing targeted email
+                        campaigns to reach your audience effectively. We handle everything from designing email
+                        templates and crafting compelling content to managing distribution lists and analyzing campaign
+                        performance to ensure high engagement and conversion rates.</p>
+                </details>
+                <details class="detailstag">
+                    <summary class="detailsheading">Can you help with setting up professional business emails?</summary>
+                    <p class="detailspara">Yes, we offer business email setup services, including creating custom email
+                        addresses with your domain name, configuring email clients, and ensuring proper security
+                        measures are in place. This enhances your company's professional image and improves or
+                        munication efficiency.</p>
+                </details>
+                <details class="detailstag">
+                    <summary class="detailsheading">What types of businesses can benefit from your application
+                        development services? </summary>
+                    <p class="detailspara">Our application development services cater to a wide range of businesses,
+                        from small startups to large enterprises. We tailor our solutions to meet specific industry
+                        needs, whether you're in retail, finance, healthcare, or any other sector, ensuring that the
+                        applications support and enhance your unique business operations.</p>
+                </details>
+                <details class="detailstag">
+                    <summary class="detailsheading">How do you ensure the security of the applications you develop?
+                    </summary>
+                    <p class="detailspara">We prioritize security by implementing industry-standard practices such as
+                        secure coding techniques, regular vulnerability assessments, and data encryption. We also follow
+                        best practices for user authentication and authorization to protect your data and applications
+                        from unauthorized access. </p>
+                </details>
+                <details class="detailstag">
+                    <summary class="detailsheading">What is your approach to customer support and maintenance?</summary>
+                    <p class="detailspara">We provide ongoing support and maintenance for all our applications to ensure
+                        they remain functional and up-to-date. Our support services include troubleshooting, regular
+                        updates, and performance monitori dedicated support charinels to address any issues promptly. We
+                        also offer</p>
+                </details>
+                <details class="detailstag">
+                    <summary class="detailsheading">How can I get started with your services?</summary>
+                    <p class="detailspara">To get started, you can contact us through our website or by phone to
+                        schedule a consultation. We'll discuss your specific needs, provide a detailed proposal, and
+                        outline the next steps. Our team is here to guide you through the process and ensure that our
+                        solutions align with your business objectives.</p>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="joinbox">
+            <h1 id="jointeamheading">Join our team</h1>
+            <p id="joinpara">Realize your potential.</p>
+            <button id="joinbtn"><a href="/registermhform" style="text-decoration: none;">GET strated</a></button>
+        </div>
+
+        <div class="socialmedia">
+            <div class="socialparas">
+                <p id="socialpara">Social</p>
+                <p id="followuspara">Follow us for the latest updates</p>
+            </div>
+            <ul class="sociallogos">
+
+                <li><a href="https://www.facebook.com/people/Mhtechin/61556177946992/" class="socialimg"><img
+                            src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="facebook"></a></li>
+                <li><a href="https://www.youtube.com/@mhtechintech" class="socialimg"><img
+                            src="https://cdn-icons-png.flaticon.com/128/5968/5968852.png" alt="youtube"></a></li>
+                <li><a href="https://www.instagram.com/mhtechin?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        class="socialimg"><img src="https://cdn-icons-png.flaticon.com/128/174/174855.png"
+                            alt="instagram"></a></li>
+                <li><a href="https://www.linkedin.com/company/mhtechin-india/" class="socialimg"><img
+                            src="https://cdn-icons-png.flaticon.com/128/15455/15455800.png" alt="linkedin"></a></li>
+
+            </ul>
+
+            <div class="copyright">
+                <div class="copyclass">
+                    <p id="companylogo">MHTEACHIN</p>
+                </div>
+                <div class="copyclass">
+                    <p id="copyrightpara">&copy copyright 2025 All rights reserved by MHTEACHIN</p>
+                </div>
+
+
+            </div>
+    </footer>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+const closeNav = document.querySelector('.close-nav');
+const navLinks = document.querySelector('.nav-links');
+const counter = document.getElementById('genaiuser');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.add('active');
+});
+
+closeNav.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+});
+let a = 0;
+let users = setInterval(() => {
+    s = a;
+    if (s >= 10000-50) {
+        clearInterval(users); // Stops the interval after 5 executions
+    }
+   
+    counter.innerHTML = `${a = s + 50}+Users`
+},20);
+
+</script>
+</body>
+
+</html>

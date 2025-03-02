@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="goldenrod" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="darkgoldenrod" media="(prefers-color-scheme: dark)">
+    <meta name="description" content="What services does offer? specializes in business application development, including custom software solutions, business suits, and&nbsp">
+    <meta property="og:image" content="https://www.mhtechin.com/wp-content/uploads/2024/08/favicon-150x150.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="author" content="Harshad Bankar">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="HTML, CSS, JavaScript, web development">
+    <title>abaut.mhteachin</title>
+    <link rel="shortcut icon" href="https://www.mhtechin.com/wp-content/uploads/2024/08/favicon-150x150.png"
+        type="image/x-icon">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Baloo+Bhai+2:wght@400..800&display=swap');
+
+:root {
+    --color1: black;
+    --color2: goldenrod;
+    --color6: white;
+}
+::-webkit-scrollbar {
+    width: 1px;
+  }
+
+
+* {
+    font-family: "Baloo Bhai 2", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: black;
+}
+
+/* Navbar Styles */
+header{
+    top: 0px;
+    position: sticky;
+    z-index: 100;
+}
+nav {
+    top: 0px;
+    position: sticky;
+    width: 100%;
+    background: transparent;
+    padding: 1rem 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color2);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Close Button */
+.close-nav {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.nav-links li {
+    transition: 0.3s;
+
+}
+
+.nav-links li:hover {
+    transform: scale(1.2);
+    font-weight: bolder;
+}
+
+/* Main Navigation */
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--color6);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+    position: relative;
+}
+
+/* Neon Underline Effect */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: var(--color2);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: var(--color2);
+    transform: scale(1.1);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+@media (max-width: 1024px) {
+
+    hr {
+        display: flex;
+        border: 1px solid var(--color2);
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 1100;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        height: 100vh;
+        background: var(--color1);
+        flex-direction: column;
+        text-align: center;
+        padding: 4rem 2rem;
+        gap: 1rem;
+        border-right: 5px solid var(--color5);
+        box-shadow: 5px 0px 20px var(--color2);
+        backdrop-filter: blur(100px);
+        transition: all 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .close-nav {
+        display: block;
+        z-index: 1100;
+    }
+}
+
+/* nav bar style end */
+
+/* footer style */
+
+footer{
+    /* border: 2px solid red; */
+    height: auto;
+}
+.joinbox{
+    width: 100%;
+    /* border: 2px solid white; */
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    line-height: 3;
+}
+.joinbox h1{
+    color: white;
+    font-size: 3em;
+    font-weight:1;
+    margin-top: 50px;
+}
+.joinbox p{
+    color: white;
+    font-size: 20px;
+    /* margin: 20px; */
+
+}
+.joinbox button {
+    width: 250px;
+    height: auto;
+    border-radius: 90px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid wheat;
+    font-size: 30px;
+    font-weight: 200;
+    transition: 1s;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    /* padding: 10px; */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.joinbox button a {
+    color: white;
+    /* border: 2px solid; */
+    border-radius: 90px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    transition: 1s;
+}
+
+.joinbox button:hover,
+.joinbox button a:hover {
+    /* transform: scale(1.2); */
+    background-color: white;
+    border: none;
+    /* box-shadow: 10px 10px 20px rgba(245, 222, 179, 0.356); */
+    color: black;
+}
+
+.socialmedia{
+    /* border: 2px solid rgb(224, 7, 7); */
+    width: auto;
+    height: auto;
+    color: white;
+    /* margin: 20px;     */
+}
+.socialmedia #socialpara{
+    /* border: 2px solid; */
+    font-size: 20px;
+    line-height: 1;
+    margin: 20px;
+    /* padding: 10px; */
+}
+.socialmedia #followuspara{
+    /* border: 2px solid; */
+    margin: 20px;
+    font-size:40px;
+    line-height: 1;
+}
+
+.sociallogos{
+    /* border: 2px solid rgb(35, 245, 7); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sociallogos .socialimg{
+    height:auto;
+    width: auto;
+    padding: 10px;
+    /* border: 2px solid yellow; */
+    margin:10px;
+   
+    /* aspect-ratio: 3/1; */
+}
+.sociallogos .socialimg img{
+    transition: 0.3s;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    background: #000000;
+    mix-blend-mode: black;
+    /* border: 2px solid; */
+}
+.sociallogos .socialimg img:hover{
+    transform: scale(1.2);
+}
+
+.copyright{
+    /* border: 2px solid black; */
+    margin: 0;
+    height: auto;
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    /* display: flex; */
+    justify-content: space-between;
+}
+.copyclass{
+    font-size:20px;
+    line-height: 1;
+    font-weight: bolder;
+}
+
+@media (max-width: 1024px) {
+    .facsdetails{
+        display: block;
+    }
+
+    .facsdetails .detailstag{
+        width: 95%;
+        margin: 10px;
+    }
+    .sociallogos .socialimg img{
+        height: 25px;
+        width: 25px;
+    }
+}
+
+/* footer style end */
+
+
+
+.assist{
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    color: white;
+    /* margin-top: 50px; */
+    margin-bottom: 50px;
+    padding: 10px;
+    align-content: center;
+}
+
+.assist::before{
+    background-image: url("https://freerangestock.com/sample/144708/woman-using-computers-in-office-near-window--bw.jpg");
+    content: "";
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: hsl(0, 0%, 100%); /* Instead of opacity */
+    background-blend-mode:multiply;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.assist #logo{
+    margin-bottom: 100px;
+    display:block;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color2);
+}
+.assist #assistpara{
+    width: 50%;
+    border-left: 5px solid var(--color2);
+    padding: 10px;
+    margin: 50px;
+    font-size: 2em;
+    line-height: 1;
+    font-weight: 900;
+    text-shadow: 10px 10px 20px black;
+}
+.assist #getstartbtn{
+    border: 5px solid var(--color2);
+    display: block;
+    width: 200px;
+    height: 80px;
+    border-radius: 90px;
+    background-color: transparent;
+    color: var(--color2);
+    font-size: 2em;
+    font-weight: bolder;
+    transition: 0.4s;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.assist #getstartbtn:hover{
+    transform: scale(1.1) translateX(20px);
+    background-color: var(--color2);
+    color: black;
+    text-shadow: 10px 10px 20px black;
+    box-shadow: 10px 10px 20px black;
+}
+
+.founded{
+    color: aliceblue;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+.founded #mainpara{
+    text-align: center;
+    height: auto;
+    width: auto;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+.founded #childpara{
+    text-align: center;
+    height: auto;
+    width: auto;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+.facsdetails{
+    padding: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.facsdetails details {
+    background: rgb(0, 0, 0);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.facsdetails details summary {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color2);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.facsdetails details[open] {
+    background: #000000;
+    border-left: 5px solid #feffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+}
+
+.detailspara {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+details summary::after {
+    content: "➕";
+    font-size: 18px;
+    color: #007bff;
+    transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+    content: "➖";
+}
+
+details:hover {
+    transform: scale(1.02);
+}
+
+
+@media (max-width: 1024px) {}
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MHTEACHIN</div>
+
+            <ul class="nav-links">
+                <button class="close-nav">✖</button>
+                <li><a href="/">home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/career">Career</a></li>
+                <li><a href="/mobile">Mobile</a></li>
+                <li><a href="/mail">Mail</a></li>
+                <li><a href="https://innovations.mhtechin.com/">Innovation</a></li>
+                <li><a href="/suite">Suite</a></li>
+                <li><a href="https://www.mhtechin.com/support/">Support</a></li>
+                <li><a href="/registermhform">Contact</a></li>
+            </ul>
+
+            <button class="menu-toggle">☰</button>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="assist">
+            <p id="logo">MH teachin</p>
+            <p id="assistpara">To learn more about how MHTECHIN can assist your business, please reach out to us at
+            </p>
+            <button id="getstartbtn">GET Started</button>
+        </div>
+
+        <div class="founded">
+            <p id="mainpara">Founded in 2016 and restructured on March 1, 2023, MHTECHIN is a dynamic and innovative
+                software development company with a global presence. Acquired by Mhaske Technologies Private Limited, we
+                specialize in developing cutting-edge, cloud-based software applications tailored to meet the diverse
+                needs of businesses across various industries.</p>
+            <p id="childpara">Our dedicated team of professiorials is committed to delivering high-qu drive efficiency
+                and growth for our clients. software solutions that </p>
+        </div>
+
+        <div class="facsdetails">
+
+            <details class="detailstag">
+                <summary class="detailsheading">Our Impact</summary>
+                <p class="detailspara">Since our inception, MHTECHIN has proudly served over 1.000 users, providing them
+                    with robust and scalable software solutions that enhance their operational capabilities. We leverage
+                    the latest technologies and industry best practices to ensure our clients receive exceptional
+                    products and services. </p>
+            </details>
+            <details class="detailstag">
+                <summary class="detailsheading">Our Mission</summary>
+                <p class="detailspara">Our mission is to empower businesses with innovative cloud-based solutions that
+                    simplify complex processes, improve productivity, and foster success. At MHTECHIN, we are dedicated
+                    to excellence, customer satisfaction, and continuous improvement.</p>
+            </details>
+        </div>
+
+    </main>
+    <footer>
+        <div class="joinbox">
+            <h1 id="jointeamheading">Join our team</h1>
+            <p id="joinpara">Realize your potential.</p>
+            <button id="joinbtn" ><a href="/registermhform" style="text-decoration: none;;">GET strated</a></button>        </div>
+
+        <div class="socialmedia">
+            <div class="socialparas">
+                <p id="socialpara">Social</p>
+                <p id="followuspara">Follow us for the latest updates</p>
+            </div>
+            <div class="sociallogos">
+
+                <a href="https://www.facebook.com/people/Mhtechin/61556177946992/" class="socialimg"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png"
+                        alt=""></a>
+                <a href="https://www.youtube.com/@mhtechintech" class="socialimg"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968852.png"
+                        alt=""></a>
+                <a href="https://www.instagram.com/mhtechin?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="socialimg"><img src="https://cdn-icons-png.flaticon.com/128/174/174855.png"
+                        alt=""></a>
+                <a href="https://www.linkedin.com/company/mhtechin-india/" class="socialimg"><img src="https://cdn-icons-png.flaticon.com/128/15455/15455800.png"
+                        alt=""></a>
+
+            </div>
+
+            <div class="copyright">
+                <div class="copyclass">
+                    <p id="companylogo">MHTEACHIN</p>
+                </div>
+                <div class="copyclass">
+                    <p id="copyrightpara">&copy copyright 2025 All rights reserved by MHTEACHIN</p>
+                </div>
+
+
+            </div>
+    </footer>
+    <script>
+        // nav script start
+        const menuToggle = document.querySelector('.menu-toggle');
+        const closeNav = document.querySelector('.close-nav');
+        const navLinks = document.querySelector('.nav-links');
+
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.add('active');
+        });
+
+        closeNav.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+        //nav script end
+
+    </script>
+</body>
+
+</html>
